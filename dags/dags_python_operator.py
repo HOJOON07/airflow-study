@@ -20,4 +20,4 @@ with DAG(
         python_callable=select_fruit
     )
 
-    py_t1()
+    py_t1
