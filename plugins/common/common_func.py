@@ -13,14 +13,13 @@ def regist(name, sex, *args):
     # )
 
 
-def regist2(name, sex, *args):
-    print(name)
-    print(sex)
-    print(args)
-
-
-# python_task2 = PythonOperator(
-#     task_id="python_task2",
-#     python_callable=regist2,
-#     op_args=['hojoon', 'man', "korea", "seoul"]
-# )
+def regist2(name, sex, *args, **kwargs):
+    print('이름 : ', name)
+    print('성별 : ', sex),
+    print(f'기타옵션들 : {args}')
+    email = kwargs['email'] or None
+    phone = kwargs["phone"] or None
+    if email:
+        print(email)
+    if phone:
+        print(phone)
